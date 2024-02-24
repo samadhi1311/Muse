@@ -1,0 +1,36 @@
+.header {
+	height: 10vh;
+	background-color: #252525;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding-left: 2rem;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	margin-top: 2rem;
+}
+
+.column-left {
+	width: 20%;
+	height: auto;
+	padding: 1rem;
+}
+
+.column-right {
+	width: 40%;
+	padding: 1rem;
+}
+
+.column-left li a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 1px;
+}
