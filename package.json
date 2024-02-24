@@ -1,0 +1,18 @@
+{
+	"name": "muse",
+	"version": "1.0.0",
+	"description": "Muse is a easy-to-use CSS framework",
+	"directories": {
+		"doc": "docs"
+	},
+	"scripts": {
+		"dev": "npx parcel src/index.html",
+		"build": "parcel build src/index.html --dist-dir ./docs --public-url https://samadhi1311.github.io/muse/"
+	},
+	"keywords": [],
+	"author": "samadhi1311",
+	"license": "MIT",
+	"devDependencies": {
+		"parcel": "^2.11.0"
+	}
+}
