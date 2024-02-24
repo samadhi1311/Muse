@@ -1,0 +1,149 @@
+/* Utility classes */
+
+/* margin */
+.margin-y-sm {
+	margin: 1rem 0;
+}
+
+.margin-y-md {
+	margin: 2rem 0;
+}
+
+.margin-y-lg {
+	margin: 4rem 0;
+}
+
+.margin-x-sm {
+	margin: 0 1rem;
+}
+
+.margin-x-md {
+	margin: 0 2rem;
+}
+
+.margin-x-lg {
+	margin: 4rem;
+}
+
+.margin-sm {
+	margin: 1rem;
+}
+
+.margin-md {
+	margin: 2rem;
+}
+
+.margin-lg {
+	margin: 4rem;
+}
+
+/* padding */
+.padding-y-sm {
+	padding: 1rem 0;
+}
+
+.padding-y-md {
+	padding: 2rem 0;
+}
+
+.padding-y-lg {
+	padding: 4rem 0;
+}
+
+.padding-x-sm {
+	padding: 0 1rem;
+}
+
+.padding-x-md {
+	padding: 0 2rem;
+}
+
+.padding-x-lg {
+	padding: 0 4rem;
+}
+
+.padding-sm {
+	padding: 1rem;
+}
+
+.padding-md {
+	padding: 2rem;
+}
+
+.padding-lg {
+	padding: 4rem;
+}
+
+/* flex */
+.flex-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-x-center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.flex-y-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.gap-sm {
+	gap: 1rem;
+}
+
+.gap-md {
+	gap: 2rem;
+}
+
+.gap-lg {
+	gap: 4rem;
+}
+
+/* Width */
+.width-full {
+	width: 100vw;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.width-50 {
+	width: 50%;
+}
+
+.width-25 {
+	width: 25%;
+}
+
+.width-0 {
+	width: 0;
+}
+
+/* Height */
+.height-full {
+	height: 100vh;
+}
+
+.height-100 {
+	height: 100%;
+}
+
+.height-50 {
+	height: 50%;
+}
+
+.height-25 {
+	height: 25%;
+}
+
+.height-0 {
+	height: 0;
+}

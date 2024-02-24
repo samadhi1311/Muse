@@ -1,0 +1,12 @@
+/* Colors */
+:root {
+	--accent: #535c8d;
+	--accent-secondary: #7e86b4;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--accent: #7e86b4;
+		--accent-secondary: #535c8d;
+	}
+}

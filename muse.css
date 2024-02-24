@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('./reset.css');
+@import url('./colors.css');
+@import url('./muse-utilities.css');
+
+/* Colors */
+:root {
+	color-scheme: light;
+	--background: #ffffff;
+	--light-background: #e1e1e1;
+	--medium-background: #bebebe;
+	--medium-foreground: #353535;
+	--foreground: #252525;
+	--light-shadow: rgba(0, 0, 0, 0.05);
+	--dark-shadow: rgba(0, 0, 0, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+		--background: #151515;
+		--light-background: #353535;
+		--medium-background: #505050;
+		--medium-foreground: #e1e1e1;
+		--foreground: #ffffff;
+		--light-shadow: rgba(0, 0, 0, 0.5);
+		--dark-shadow: rgba(0, 0, 0, 1);
+	}
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	color: var(--foreground) !important;
+	background-color: var(--background) !important;
+}
+
+h1 {
+	color: var(--accent);
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+h2 {
+	color: var(--accent-secondary);
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+
+h3 {
+	color: var(--accent-secondary);
+	font-size: 1.75rem;
+	font-weight: 500;
+}
+
+p {
+	color: var(--foreground);
+}
+
+input[type='submit'],
+input[type='button'],
+input[type='reset'],
+button {
+	background-color: var(--accent);
+	color: var(--foreground);
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+	box-shadow: 2px 2px 8px var(--light-shadow);
+	transition: all 300ms ease;
+}
+
+input[type='submit']:hover,
+input[type='button']:hover,
+input[type='reset']:hover,
+button:hover {
+	background-color: var(--accent-secondary);
+	box-shadow: 2px 2px 8px var(--dark-shadow);
+}
+
+input[type='checkbox'],
+input[type='date'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='file'],
+input[type='image'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='radio'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
+textarea,
+select {
+	border: var(--medium-background) 1px solid;
+	border-radius: 8px;
+	background-color: var(--light-background);
+	color: var(--medium-foreground);
+	padding: 0.25rem 0.5rem;
+	outline: none;
+	box-shadow: 2px 2px 8px var(--light-shadow);
+	transition: all 300ms ease;
+	vertical-align: middle;
+}
+
+input[type='range'] {
+	border-radius: 8px;
+	background-color: transparent;
+	color: var(--medium-foreground);
+	padding: 0.25rem 0.5rem;
+	outline: none;
+	transition: all 300ms ease;
+	vertical-align: middle;
+	box-shadow: none;
+}
+
+input[type='checkbox']:focus,
+input[type='date']:focus,
+input[type='datetime-local']:focus,
+input[type='email']:focus,
+input[type='file']:focus,
+input[type='image']:focus,
+input[type='month']:focus,
+input[type='number']:focus,
+input[type='password']:focus,
+input[type='radio']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='text']:focus,
+input[type='time']:focus,
+input[type='url']:focus,
+input[type='week']:focus,
+textarea:focus,
+select:focus {
+	background-color: var(--background);
+	box-shadow: 2px 2px 8px var(--dark-shadow);
+}
+
+input[type='range']:focus {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+input[type='checkbox'],
+input[type='radio'],
+input[type='color'] {
+	accent-color: var(--accent);
+	height: 1rem;
+	width: 1rem;
+	margin: 0 0.5rem 0 0;
+	cursor: pointer;
+}
+
+input[type='date'],
+input[type='time'],
+input[type='color'] {
+	cursor: pointer;
+}
+
+input[type='file'] {
+	cursor: pointer;
+}
+
+input[type='color'] {
+	background-color: var(--light-background);
+	height: 2rem;
+	width: 3rem;
+	border-radius: 4px;
+	border: 1px solid var(--medium-background);
+	outline: none;
+	padding: 1px;
+}
+
+a {
+	font-weight: 500;
+	transition: all 300ms ease;
+}
+
+a:hover {
+	color: var(--accent);
+}
+
+hr {
+	width: 100%;
+	border: var(--light-background) 1px solid;
+}
