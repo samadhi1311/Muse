@@ -7,7 +7,7 @@
 	},
 	"scripts": {
 		"dev": "npx parcel src/index.html",
-		"build": "parcel build src/index.html --dist-dir ./docs --public-url https://samadhi1311.github.io/muse/"
+		"build": "parcel build src/index.html --dist-dir ./docs --public-url https://samadhi1311.github.io/Muse/"
 	},
 	"keywords": [],
 	"author": "samadhi1311",
