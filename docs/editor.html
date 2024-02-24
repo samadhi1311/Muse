@@ -1,1 +1,46 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Live Preview Editor</title><link rel="stylesheet" href="https://samadhi1311.github.io/Muse/index.be8cd5e7.css"><link rel="stylesheet" href="https://samadhi1311.github.io/Muse/index.6df91aeb.css"></head><body class="main-container"> <div class="editor"> <p>Select your preferred colors click 'Generate CSS' to download stylesheet</p>  <div class="color-selector"> <label for="accent">Main accent:</label> <input class="color-input" type="color" id="accent" value="#535c8d"> <label for="accent-secondary">Secondary accent:</label> <input class="color-input" type="color" id="accent-secondary" value="#7e86b4"> </div> <button id="generate-css"><a onclick="downloadCustomizedCSS()">Generate CSS</a></button> </div> <div class="preview">  <div class="light"> <hr> <h1 style="color:var(--accent)">Light mode</h1> <h2 style="color:var(--accent-secondary)" ">Heading 2</h2> <h3 style="color:var(--accent-secondary)" ">Heading 3</h3> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non risus quis nisl suscipit dignissim. Suspendisse eu eros et arcu hendrerit aliquam. Mauris vitae molestie enim. Nunc tincidunt purus at bibendum ultrices. Aliquam lobortis purus consectetur imperdiet sodales. Sed dignissim egestas lectus, at volutpat ligula viverra eu. Suspendisse ut mattis augue. Fusce vel dignissim justo. </p> <button>Button</button> <input type="checkbox" placeholder="Checkbox Placeholder" checked> <input type="date" placeholder="Date Placeholder"> <input type="text" placeholder="Text Placeholder"> <input type="number" placeholder="Number Placeholder"> <input type="file" placeholder="File Placeholder"> <input type="radio" placeholder="Radio Placeholder" checked> <input type="range" placeholder="Range Placeholder"> <select> <option value disabled selected>Select an option</option> <option value="option1">Option 1</option> <option value="option2">Option 2</option> <option value="option3">Option 3</option> </select> <a href="#">Link</a> </div> <div class="dark"> <hr> <h1 style="color:var(--accent)" ">Dark mode</h1> <h2 style="color:var(--accent-secondary)" ">Heading 2</h2> <h3 style="color:var(--accent-secondary)" ">Heading 3</h3> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non risus quis nisl suscipit dignissim. Suspendisse eu eros et arcu hendrerit aliquam. Mauris vitae molestie enim. Nunc tincidunt purus at bibendum ultrices. Aliquam lobortis purus consectetur imperdiet sodales. Sed dignissim egestas lectus, at volutpat ligula viverra eu. Suspendisse ut mattis augue. Fusce vel dignissim justo. </p> <button>Button</button> <input type="checkbox" placeholder="Checkbox Placeholder" checked> <input type="date" placeholder="Date Placeholder"> <input type="text" placeholder="Text Placeholder"> <input type="number" placeholder="Number Placeholder"> <input type="file" placeholder="File Placeholder"> <input type="radio" placeholder="Radio Placeholder" checked> <input type="range" placeholder="Range Placeholder"> <select> <option value disabled selected>Select an option</option> <option value="option1">Option 1</option> <option value="option2">Option 2</option> <option value="option3">Option 3</option> </select> <a href="#">Link</a> </div> </div> <script>document.querySelectorAll(".color-input").forEach(e=>{e.addEventListener("input",()=>{let t=`--${e.id}`;document.documentElement.style.setProperty(t,e.value)})});</script> </body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Live Preview Editor</title><link rel="stylesheet" href="https://samadhi1311.github.io/Muse/index.be8cd5e7.css"><link rel="stylesheet" href="https://samadhi1311.github.io/Muse/index.6df91aeb.css"></head><body class="main-container"> <div class="editor"> <p>Select your preferred colors click 'Generate CSS' to download stylesheet</p>  <div class="color-selector"> <label for="accent">Main accent:</label> <input class="color-input" type="color" id="accent" value="#535c8d"> <label for="accent-secondary">Secondary accent:</label> <input class="color-input" type="color" id="accent-secondary" value="#7e86b4"> </div> <button id="generate-css"><a onclick="downloadCustomizedCSS()">Generate CSS</a></button> </div> <div class="preview">  <div class="light"> <hr> <h1 style="color:var(--accent)">Light mode</h1> <h2 style="color:var(--accent-secondary)" ">Heading 2</h2> <h3 style="color:var(--accent-secondary)" ">Heading 3</h3> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non risus quis nisl suscipit dignissim. Suspendisse eu eros et arcu hendrerit aliquam. Mauris vitae molestie enim. Nunc tincidunt purus at bibendum ultrices. Aliquam lobortis purus consectetur imperdiet sodales. Sed dignissim egestas lectus, at volutpat ligula viverra eu. Suspendisse ut mattis augue. Fusce vel dignissim justo. </p> <button>Button</button> <input type="checkbox" placeholder="Checkbox Placeholder" checked> <input type="date" placeholder="Date Placeholder"> <input type="text" placeholder="Text Placeholder"> <input type="number" placeholder="Number Placeholder"> <input type="file" placeholder="File Placeholder"> <input type="radio" placeholder="Radio Placeholder" checked> <input type="range" placeholder="Range Placeholder"> <select> <option value disabled selected>Select an option</option> <option value="option1">Option 1</option> <option value="option2">Option 2</option> <option value="option3">Option 3</option> </select> <a href="#">Link</a> </div> <div class="dark"> <hr> <h1 style="color:var(--accent)" ">Dark mode</h1> <h2 style="color:var(--accent-secondary)" ">Heading 2</h2> <h3 style="color:var(--accent-secondary)" ">Heading 3</h3> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non risus quis nisl suscipit dignissim. Suspendisse eu eros et arcu hendrerit aliquam. Mauris vitae molestie enim. Nunc tincidunt purus at bibendum ultrices. Aliquam lobortis purus consectetur imperdiet sodales. Sed dignissim egestas lectus, at volutpat ligula viverra eu. Suspendisse ut mattis augue. Fusce vel dignissim justo. </p> <button>Button</button> <input type="checkbox" placeholder="Checkbox Placeholder" checked> <input type="date" placeholder="Date Placeholder"> <input type="text" placeholder="Text Placeholder"> <input type="number" placeholder="Number Placeholder"> <input type="file" placeholder="File Placeholder"> <input type="radio" placeholder="Radio Placeholder" checked> <input type="range" placeholder="Range Placeholder"> <select> <option value disabled selected>Select an option</option> <option value="option1">Option 1</option> <option value="option2">Option 2</option> <option value="option3">Option 3</option> </select> <a href="#">Link</a> </div> </div> <script>
+			const colorInputs = document.querySelectorAll('.color-input');
+
+			colorInputs.forEach((input) => {
+				input.addEventListener('input', () => {
+					const propertyName = `--${input.id}`;
+					document.documentElement.style.setProperty(propertyName, input.value);
+				});
+			});
+
+			// Function to generate and download a CSS file with customized colors
+			function downloadCustomizedCSS() {
+				const colorVariables = {
+					accent: getComputedStyle(document.documentElement).getPropertyValue('--accent'),
+					accentSecondary: getComputedStyle(document.documentElement).getPropertyValue('--accent-secondary'),
+				};
+
+				let cssContent = `/* custom generated stylesheet from https://github.com/samadhi1311/Muse */
+:root {
+	--accent: ${colorVariables.accent};
+	--accent-secondary: ${colorVariables.accentSecondary};
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {						
+		--accent: ${colorVariables.accentSecondary};
+		--accent-secondary: ${colorVariables.accent};
+		}
+}`;
+
+				// Create a Blob object containing the CSS content
+				const blob = new Blob([cssContent], { type: 'text/css' });
+
+				// Create a link element
+				const link = document.createElement('a');
+				link.href = window.URL.createObjectURL(blob);
+				link.download = 'colors.css';
+
+				// Append the link to the document body and click it to trigger the download
+				document.body.appendChild(link);
+				link.click();
+
+				// Clean up by removing the link after download
+				document.body.removeChild(link);
+			}
+		</script> </body></html>
