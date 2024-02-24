@@ -1,0 +1,143 @@
+/* Additional styling for the editor interface */
+/* You can customize this according to your preference */
+
+:root {
+	--background-light: #ffffff;
+	--light-background-light: #f9f9f9;
+	--medium-background-light: #bebebe;
+	--medium-foreground-light: #353535;
+	--foreground-light: #252525;
+	--light-shadow-light: rgba(0, 0, 0, 0.05);
+	--dark-shadow-light: rgba(0, 0, 0, 0.25);
+
+	--background-dark: #151515;
+	--light-background-dark: #353535;
+	--medium-background-dark: #505050;
+	--medium-foreground-dark: #e1e1e1;
+	--foreground-dark: #ffffff;
+	--light-shadow-dark: rgba(0, 0, 0, 0.5);
+	--dark-shadow-dark: rgba(0, 0, 0, 1);
+}
+
+.main-container {
+	min-height: 100vh;
+	padding: 1rem;
+}
+
+.editor {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	background-color: #252525;
+	padding: 1rem;
+	margin: 1rem;
+	border-radius: 8px;
+}
+
+.editor p {
+	color: #909090;
+}
+
+.color-selector {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 2rem;
+	background-color: #353535;
+	border-radius: 8px;
+}
+
+.preview {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+}
+
+.preview .light {
+	color-scheme: light;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	gap: 1rem;
+	margin: 1rem;
+	background-color: var(--background-light);
+	color: var(--foreground-light);
+	border-radius: 8px;
+}
+.preview .light input,
+.preview .light select,
+.preview .light textarea {
+	background-color: var(--light-background-light);
+	color: var(--medium-foreground-light);
+	box-shadow: 2px 2px 8px var(--light-shadow-light);
+}
+
+.preview .light input:focus,
+.preview .light select:focus,
+.preview .light textarea:focus {
+	background-color: var(--background-light);
+	box-shadow: 2px 2px 8px var(--dark-shadow-light);
+}
+
+.preview .light button {
+	background-color: var(--accent);
+	box-shadow: 2px 2px 8px var(--light-shadow-light);
+}
+
+.preview .light button:hover {
+	background-color: var(--accent-secondary);
+	box-shadow: 2px 2px 8px var(--dark-shadow-light);
+}
+
+.preview .light p {
+	color: var(--foreground-light);
+}
+
+.preview .dark {
+	color-scheme: dark;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	gap: 1rem;
+	margin: 1rem;
+	background-color: var(--background-dark);
+	color: var(--foreground-dark);
+	border-radius: 8px;
+}
+
+.preview .dark input,
+.preview .dark select,
+.preview .dark textarea {
+	background-color: var(--light-background-dark);
+	color: var(--medium-foreground-dark);
+	box-shadow: 2px 2px 8px var(--light-shadow-dark);
+}
+
+.preview .dark input:focus,
+.preview .dark select:focus,
+.preview .dark textarea:focus {
+	background-color: var(--background-dark);
+	box-shadow: 2px 2px 8px var(--dark-shadow-dark);
+}
+
+.preview .dark button {
+	background-color: var(--accent);
+	box-shadow: 2px 2px 8px var(--light-shadow-dark);
+}
+
+.preview .dark button:hover {
+	background-color: var(--accent-secondary);
+	box-shadow: 2px 2px 8px var(--dark-shadow-dark);
+}
+
+.preview .light input[type='range'],
+.preview .dark input[type='range'],
+.preview .light input[type='range']:focus,
+.preview .dark input[type='range']:focus {
+	background-color: transparent;
+	box-shadow: none;
+}
