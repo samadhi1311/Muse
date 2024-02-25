@@ -4,9 +4,16 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Documentation Page</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<link rel="stylesheet" href="../muse.css" />
 		<link rel="stylesheet" href="./docs.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/a11y-dark.min.css" />
+		<script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+		<script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/languages/html.min.js"></script>
+
+		<script>
+			hljs.highlightAll();
+		</script>
 	</head>
 
 	<body class="flex-center width-full">
@@ -23,10 +30,27 @@
 					<li>
 						<a onclick="showContent('getting-started')"> <span class="material-symbols-rounded"> line_start_circle </span>Getting Started</a>
 					</li>
+					<li>
+						<a onclick="showContent('typography')"><span class="material-symbols-rounded"> text_fields </span>Typography</a>
+					</li>
+					<li>
+						<a onclick="showContent('utilities')"><span class="material-symbols-rounded"> responsive_layout </span>Utilities</a>
+					</li>
 				</ul>
 			</div>
 			<div class="column-right" id="content"></div>
 		</div>
+
+		<!-- <div class="code-container">
+			<div class="copy-code">
+				<a onclick="copycode('')"><span class="material-symbols-rounded"> content_copy </span>Copy code</a>
+			</div>
+			<div class="code">
+				<pre>
+					<code class="language-html" style="background-color: transparent;"> &lt;div class="box padding-lg"&gt;Large padding&lt;/div&gt; </code>
+				</pre>
+			</div>
+		</div> -->
 
 		<script>
 			// JavaScript function to change content based on selected topic
@@ -39,25 +63,52 @@
 					topicList[i].classList.remove('active');
 				}
 
-				// Show selected topic
+				// Show selected topic and mark as active
 				for (var i = 0; i < topicList.length; i++) {
-					if (topicList[i].getAttribute('onclick') === "showContent('" + section + "')") {
+					if (topicList[i].getAttribute('onclick').includes(section)) {
 						topicList[i].classList.add('active');
+						break; // Stop looping once the active topic is found
 					}
 				}
 
+				// Define content for each section
+				var sectionContent = {
+					overview: {
+						heading: 'Overview',
+						text: 'Muse CSS framework provides a customizable set of styles and colors for building web frontends. It includes predefined color schemes for light and dark modes, typography settings, form elements styling, utility classes for spacing, flexbox layout, width, and height adjustments, as well as a reset.css file to normalize default browser styles.',
+						preview: '',
+						code: '',
+					},
+					'getting-started': {
+						heading: 'Getting Started',
+						text: 'To use this CSS framework, simply copy all 3 CSS files and import the provided Muse.css stylesheet into your HTML file. Ensure that you include it before your custom styles to leverage its predefined styles, utility classes, and reset.css effectively.',
+						preview: '',
+						code: '',
+					},
+					typography: {
+						heading: 'Typography',
+						text: 'Muse provides a variety of typography styles and settings for your website. Each style is a combination of predefined font, size, weight, and line height settings.',
+						preview:
+							'<div class="preview-column"><h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non risus quis nisl suscipit dignissim. Suspendisse eu eros et arcu hendrerit aliquam. Mauris vitae molestie enim. Nunc tincidunt purus at bibendum ultrices.</p></div>',
+						code: '',
+					},
+					utilities: {
+						heading: 'Utilities',
+						text: 'Muse provides a variety of utility classes for fast layout with margin and padding. Each utility class is has 3 variations of sizes.<ol><li>Large (lg)</li><li>Medium (md)</li><li>Small (sm)</li></ol>',
+						preview:
+							'<div class="preview-row"><div class="box padding-lg">Large padding</div><div class="box padding-md">Medium padding</div><div class="box padding-sm">Small padding</div><div class="box padding-x-md">Medium horizontal padding</div><div class="box margin-md padding-md">Medium margin and medium padding</div><div class="box padding-y-md margin-x-md">Margin horizontal medium and padding vertical medium</div></div>',
+						code: '',
+					},
+				};
+
 				// Update content based on selected topic
-				if (section === 'overview') {
-					content.innerHTML =
-						'<h2>Overview</h2><br /><p>Muse CSS framework provides a customizable set of styles and colors for building web frontends. It includes predefined color schemes for light and dark modes, typography settings, form elements styling, utility classes for spacing, flexbox layout, width, and height adjustments, as well as a reset.css file to normalize default browser styles.</p>';
-				} else if (section === 'getting-started') {
-					content.innerHTML =
-						'<h2>Getting Started</h2><br /><p>To use this CSS framework, simply copy all 3 CSS files and import the provided Muse.css stylesheet into your HTML file. Ensure that you include it before your custom styles to leverage its predefined styles, utility classes, and reset.css effectively.</p>';
+				var selectedContent = sectionContent[section];
+				if (selectedContent) {
+					content.innerHTML = `<h2>${selectedContent.heading}</h2><br /><p>${selectedContent.text}</p>${selectedContent.preview}`;
 				}
 			}
 
-			// Show content for the first topic
-			showContent('getting-started');
+			showContent('overview');
 		</script>
 	</body>
 </html>
