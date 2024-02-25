@@ -18,7 +18,8 @@ body {
 }
 
 ol,
-ul {
+ul,
+dl {
 	list-style: none;
 }
 

@@ -186,3 +186,14 @@ hr {
 	width: 100%;
 	border: var(--light-background) 1px solid;
 }
+
+code {
+	font-family: monospace;
+	color: var(--foreground);
+	background-color: transparent;
+}
+
+ol {
+	list-style: decimal;
+	margin-left: 2rem;
+}
