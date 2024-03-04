@@ -1,7 +1,7 @@
 {
 	"name": "muse",
 	"version": "1.0.0",
-	"description": "Muse is a easy-to-use CSS framework",
+	"description": "Muse is an easy-to-use CSS framework",
 	"directories": {
 		"doc": "docs"
 	},
