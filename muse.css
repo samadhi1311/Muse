@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('./reset.css');
 @import url('./colors.css');
-@import url('./muse-utilities.css');
+@import url('./utilities.css');
+@import url('./components.css');
 
 /* Colors */
 :root {
@@ -22,7 +23,7 @@
 		--light-background: #353535;
 		--medium-background: #505050;
 		--medium-foreground: #e1e1e1;
-		--foreground: #ffffff;
+		--foreground: #e9e9e9;
 		--light-shadow: rgba(0, 0, 0, 0.5);
 		--dark-shadow: rgba(0, 0, 0, 1);
 	}
@@ -61,7 +62,7 @@ input[type='button'],
 input[type='reset'],
 button {
 	background-color: var(--accent);
-	color: var(--foreground);
+	color: white;
 	padding: 0.5rem 1rem;
 	border-radius: 8px;
 	box-shadow: 2px 2px 8px var(--light-shadow);
@@ -174,6 +175,7 @@ input[type='color'] {
 }
 
 a {
+	color: var(--foreground);
 	font-weight: 500;
 	transition: all 300ms ease;
 }
@@ -184,7 +186,7 @@ a:hover {
 
 hr {
 	width: 100%;
-	border: var(--light-background) 1px solid;
+	border: var(--light-foreground) 1px solid;
 }
 
 code {
